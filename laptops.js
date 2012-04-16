@@ -34,23 +34,11 @@
 			//Variables for sold Laptop Models that store arrays in objects(positions)
 				var ret = "returned";
 				var mod1re = lapRet.returned[0];//Model 1 returned
-				var mod2re = lapRet.returned[1];//Model 2 returned
-//Calculate Required Amount of weekly Laptops
-	var calReqLap = function (amount1, amount2) {
-		var totBoLapRe = amount1 + amount2;//Total amount for both laptop models "received"
-		var reqMod1 = 500;//Requirement amount of Laptop model 1
-		var reqMod2 = 350;//Requirement amount of Laptop model 2
-		var exMod1 = mod1So - reqMod1;//Extra amount of Laptop model 1 
-		var totBoLaRe = reqMod1 + reqMod2;//Total Both Laptop Models Required 
-			if (reqMod1 < amount1) {
-				console.log("Their is always an extra amount of " + exMod1 + " " + threePro[0] + "ordered.");
-				return;
-			}
-		return exMod1;
-	};
-	calReqLap(mod1So, mod2So);
+				var mod2re = lapRet.returned[1];//Model 2 returned 
 
 
+
+//var totBoLapRe = amount1 + amount2;//Total amount for both laptop models "received"
 
 //JSON data employees
 var numEmpLa = {//(Number of Employees Laptops)
@@ -65,14 +53,13 @@ var numEmpLa = {//(Number of Employees Laptops)
 };
 
 //JSON Data stored in values
-	var callEm1 = numEmpLa.emplMod[0].lapMN1Em;
+/*	var callEm1 = numEmpLa.emplMod[0].lapMN1Em;
 	var callEm2 = numEmpLa.emplMod[1].lapMN2Em;
+	var totEmBoth = num1 + num2; 
+/*	var emplMo1 = function (num1,num2) {
+		if ()
 
-	var emplMo1 = function (num1,num2) {
-			var totEmBoth = num1 + num2; 
-				//if ()
-
-			console.log(" " + num1 + " " + num2);
+			" " + num1 + " " + num2;
 				return totEmBoth;
 				};
 			emplMo1(callEm1,callEm2);
@@ -81,6 +68,8 @@ var numEmpLa = {//(Number of Employees Laptops)
 
 //};
 //lapMod1inf();
+*/
+
 //Each object has Properties of the three products
 	//Consist of Properties (Number and String) 	
  		//Object of Laptops
@@ -102,4 +91,21 @@ var numEmpLa = {//(Number of Employees Laptops)
 		 			}
 			};
 			lapBoMod.send();
+var naLapMod1 = lapMod1.name;
+
+//Calculate Required Amount of weekly Laptops for Model 1
+	var calReqLap = function ([amount1, amount2]) {
+		var reqMod1 = 500;//Requirement amount of Laptop model 1
+		var reqMod2 = 350;//Requirement amount of Laptop model 2
+		var totBoLaRe = reqMod1 + reqMod2;//Total Both Laptop Models Required 
+		var exMod1 = mod1So - reqMod1;//Extra amount of Laptop model 1 	
+			if (reqMod1 < amount1) {
+				console.log("Their should always be an extra amount of " + exMod1 + " " + naLapMod1 + " " + threePro[0] + "ordered, which is required.");
+				} else {
+					console.log("This may result in a shortage of " + threePro[0])
+				}
+			
+		return [exMod1,exMod2];
+	};
+	var retCalReqLap = calReqLap([mod1So,mod2so]);
 
