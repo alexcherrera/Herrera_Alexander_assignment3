@@ -25,20 +25,20 @@
 				"name": "DLD-Quad",
 				"price": 1300,
 				"size": "21 inches",
-				"printer": false//If it comes with a printer
+				"printer": false,//If it comes with a printer
 			}
 		};
 		var tabBoMd = {//Both Tablet Models
 			"model1": {
 				"name": "D-Screen",
 				"price" : 350,
-				"size": "8 inches"
-				"case": false,//If a case is included
+				"size": "8 inches",
+				"case": false//If a case is included
 			},	
 		 	"model2": {
 		 		"name": "DX-Quad-Screen",
 				"price": 650,
-				"size": "11 inches"
+				"size": "11 inches",
 		    	"case": true,//If a case is included
 		    }
 		};
