@@ -1,7 +1,7 @@
 var	solDesk = {
 			models: [
-				"LDSheet",
-				"DLDSheet"
+				"LD-Sheet",
+				"DLD-Sheet"
 			],
 			sold: [
 				235,

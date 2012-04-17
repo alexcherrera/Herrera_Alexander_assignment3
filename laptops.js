@@ -35,7 +35,7 @@ var misLaMd2 = missLaMod[1];
 	//Object (Property Array)
 		var	lapRet = {//Laptops returned
 			returned: [
-				15,//Model 1
+				14,//Model 1
 				13//Model 2
 			]
 		};

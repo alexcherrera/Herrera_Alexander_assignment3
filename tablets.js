@@ -1,7 +1,7 @@
 var	solTab = {
 			models: [
-				"DScreen",
-				"DXQuadScreen"
+				"D-Screen",
+				"DX-Quad-Screen"
 			],
 			sold: [
 				840,

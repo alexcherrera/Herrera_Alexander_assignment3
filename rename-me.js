@@ -19,23 +19,84 @@
 				console.log(ceo + " has to fire someone for false advertising");
 			};
   
-	var lapReMis = {//Laptops model 1 & 2 received & missing
+	var lapRecMisRet = {//Weekly Averages Laptops model 1 & 2 received, missing, returned(by customers)
 	    receLaMod: [//received shipment Laptop Models
 	    	600,//Model 1 
 	    	450//Model 2
 	    ],
-		missLaMod: [//missing Laptops Models
+		missLaMod: [//missing Laptop Models
 			15,//Model 1 
 			12//Model 2
+		],
+		retLaMod: [//returned Laptop Models
+			14,//Model 1
+			13//Model 2
 		]
 	};
-	var desReMis = {//Array's for Desktops model 1 & 2 received & missing
-		receDeMod: [//received Desktops Models
+	var desRecMisRet = {//Array's for Weekly Averages Desktops model 1 & 2 received & missing, returned(by customers)
+		receDeMod: [//received Desktop Models
 			300,//Model 1  
 			275//Model 2
-		]
-		missDeMod: [//missing Desktops Models
+		],
+		missDeMod: [//missing Desktop Models
 			8,//Model 1  
 			5//Model 2
+		],
+		retDeMod: [//returned Desktop Models
+			12,//Model 1  
+			10//Model 2
 		]
 	};
+	var tabRecMisRet = {//Array's for Weekly Averages Tablets model 1 & 2 received & missing, returned(by customers)
+		receTaMod: [//received Tablet Models
+			900, //Model 1  
+			600//Model 2
+		],
+	 	missTaMod: [//missing Tablet Models
+	 		20,//Model 1 
+	 	    14//Model 2
+	 	],
+	 	returned: [//returned Tablet Models
+			17,//Model 1
+			14//Model2
+		]
+	};
+//Sold Products on Weekly Averages
+	var solAllPro = {//Sold All Products
+		lapSolMd: [//Laptop Sold Models
+			{
+				model1: 525,//Laptop MN1-Light
+			},
+			{	
+				model2: 375//Latop MN2-Extreme
+			}
+		],
+		desSolMd: [//Desktop Sold Models
+			{
+				model1: 235,//Desktop LD-Sheet
+			},
+			{
+				model2: 225,//Desktop DLD-Sheet
+			}
+		],
+		tabSolMd: [//Tablet Sold Models
+			{
+				model1: 840,//Tablet D-Screen
+			},
+			{
+				model2: 530//Tablet DX-Quad-Screen
+			}
+		]
+	};
+
+		
+
+
+
+
+
+
+
+
+
+
