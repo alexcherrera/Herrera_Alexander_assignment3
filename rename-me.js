@@ -131,9 +131,15 @@
 			var valTaMd1Ca = lapBoMd.model2.name;//(Value Tablet Model 2 case)
 	//Number of employees working on each product & model	
 		//(JSON) All three products & Models
-			var valAlThPr = allthrPro.lapMdsBo[0].lapMN1Em;//(Value All Three Products)
-
-
+			//Laptop Models
+				var valMN1Em = allthrPro.lapMdsBo[0].lapMN1Em;//(Value of Laptop MN1-Light Employees)
+				var valMN2Em = allthrPro.lapMdsBo[1].lapMN2Em;//(Value of Laptop MN2- Employees)
+			//Desktop Models
+				var valLDSEm = allthrPro.desMdsBo[0].deLDShEm;//(Value of Desktop LD-Sheet Employees)
+				var valDLDEm = allthrPro.desMdsBo[1].deDLDShEm;//(Value of Desktop DLD-Quad Employees)
+			//Tablet Models
+				var valDScEm = allthrPro.tabMdsBo[0].taDScrEm;//(Value of Tablet D-Screen Employees) 
+				var valDXQScEm = allthrPro.tabMdsBo[1].taDXQScEm;//(Value of Tablet D-Screen Employees)
 
 
 

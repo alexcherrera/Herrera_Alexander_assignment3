@@ -1,5 +1,5 @@
 //Laptop Model 1 & 2
-	//All infomation for each product.
+	//All infomation for each product
 		var lapBoMd = {//Both Laptop Models
 			"model1": {
 				"name": "MN1-Light",
