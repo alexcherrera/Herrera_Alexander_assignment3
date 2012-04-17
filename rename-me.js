@@ -89,12 +89,49 @@
 		]
 	};
 
-		
 
 
 
 
 
+
+
+
+//Stored values for each object
+	//All infomation for each product 
+		//(JSON) Laptop Model 1 
+			var valLpMd1N = lapBoMd.model1.name;//(Value Laptop Model 1 name)
+			var valLpMd1P = lapBoMd.model1.price;//(Value Laptop Model 1 price)
+			var valLpMd1S = lapBoMd.model1.size;//(Value Laptop Model 1 size)
+			var valLpMd1C = lapBoMd.model1.compact;//(Value Laptop Model 1 compact)
+		//(JSON) Laptop Model 2
+			var valLpMd2N = lapBoMd.model2.name;//(Value Laptop Model 2 name)
+			var valLpMd2P = lapBoMd.model2.price;//(Value Laptop Model 2 price)
+			var valLpMd2S = lapBoMd.model2.size;//(Value Laptop Model 2 size)
+			var valLpMd2C = lapBoMd.model2.compact;//(Value Laptop Model 2 compact)
+		//(JSON) Desktop Model 1 
+			var valDeMd1N = lapBoMd.model1.name;//(Value Desktop Model 1 name)
+			var valDeMd1P = lapBoMd.model1.price;//(Value Desktop Model 1 price)
+			var valDeMd1S = lapBoMd.model1.size;//(Value Desktop Model 1 size)
+			var valDeMd1Pr = lapBoMd.model1.printer;//(Vaue Desktop Model 1 printer)
+		//(JSON) Desktop Model 2
+			var valDeMd2N = lapBoMd.model2.name;//(Value Desktop Model 2 name)
+			var valDeMd2P = lapBoMd.model2.price;//(Value Desktop Model 2 price)
+			var valDeMd2S = lapBoMd.model2.size;//(Value Desktop Model 2 size)
+			var valDeMd2Pr = lapBoMd.model2.printer;//(Vaue Desktop Model 2 printer)
+		//(JSON) Tablet Model 1
+			var valTaMd1N = lapBoMd.model1.name;//(Value Tablet Model 1 name)
+			var valTaMd1P = lapBoMd.model1.name;//(Value Tablet Model 1 price)
+			var valTaMd1S = lapBoMd.model1.name;//(Value Tablet Model 1 size)
+			var valTaMd1Ca = lapBoMd.model1.name;//(Value Tablet Model 1 case)
+		//(JSON) Tablet Model 2
+			var valTaMd2N = lapBoMd.model2.name;//(Value Tablet Model 2 name)
+			var valTaMd1P = lapBoMd.model2.name;//(Value Tablet Model 2 price)
+			var valTaMd1S = lapBoMd.model2.name;//(Value Tablet Model 2 size)
+			var valTaMd1Ca = lapBoMd.model2.name;//(Value Tablet Model 2 case)
+	//Number of employees working on each product & model	
+		//(JSON) All three products & Models
+			var valAlThPr = allthrPro.lapMdsBo[0].lapMN1Em;//(Value All Three Products)
 
 
 

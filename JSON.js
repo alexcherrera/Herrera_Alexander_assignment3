@@ -7,7 +7,7 @@
 				"size": "13 inches",
 				"compact": true
 			},
-			"mode2": {
+			"model2": {
 				"name": "MN2-Extreme",
 				"price": 1500,
 				"size": "15 inches",
