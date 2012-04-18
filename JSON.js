@@ -5,13 +5,13 @@
 				"name": "MN1-Light",
 				"price": 900,
 				"size": "13 inches",
-				"compact": true
+				"durable": false
 			},
 			"model2": {
 				"name": "MN2-Extreme",
 				"price": 1500,
 				"size": "15 inches",
-				"compact": false
+				"durable": true
 			}
 		};
 		var desBoMd = {//Both Desktop Models

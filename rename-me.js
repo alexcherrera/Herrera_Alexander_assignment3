@@ -4,8 +4,8 @@
 		var manager = "Suzy Miller";
 		var compyName = "Tech Distribution";//(Company name)
 	//Array
-		var threePro = ["Laptops", " Desktops", " Tablets"];//(Three products)
-		var allMd = ["Mode 1", "Mode 2"];
+		var threePro = ["Laptop", " Desktop", " Tablet"];//(Three products)
+		var allMd = ["model 1", "model 2"];
 	//Number
 		var quaOfEaMod = 2;//Quantity of each model
 	//Boolean
@@ -17,12 +17,12 @@
 			var valLpMd1N = lapBoMd.model1.name;//(Value Laptop Model 1 name)
 			var valLpMd1P = lapBoMd.model1.price;//(Value Laptop Model 1 price)
 			var valLpMd1S = lapBoMd.model1.size;//(Value Laptop Model 1 size)
-			var valLpMd1C = lapBoMd.model1.compact;//(Value Laptop Model 1 compact)
+			var valLpMd1D = lapBoMd.model1.durable;//(Value Laptop Model 1 durable)
 		//(JSON) Laptop Model 2
 			var valLpMd2N = lapBoMd.model2.name;//(Value Laptop Model 2 name)
 			var valLpMd2P = lapBoMd.model2.price;//(Value Laptop Model 2 price)
 			var valLpMd2S = lapBoMd.model2.size;//(Value Laptop Model 2 size)
-			var valLpMd2C = lapBoMd.model2.compact;//(Value Laptop Model 2 compact)
+			var valLpMd2D = lapBoMd.model2.durable;//(Value Laptop Model 2 durable)
 		//(JSON) Desktop Model 1 
 			var valDeMd1N = lapBoMd.model1.name;//(Value Desktop Model 1 name)
 			var valDeMd1P = lapBoMd.model1.price;//(Value Desktop Model 1 price)
@@ -56,19 +56,40 @@
 			var valDXQScEm = allthrPro.tabMdsBo[1].taDXQScEm;//(Value of Tablet D-Screen Employees)
 
 //Starting Sentence	using an array	
-	console.log(ceo + " is the CEO of the company "+ compyName + ", which sells " + threePro + ".");
-		//if else of the number of models for each product	
-			if (numOfPro == true) {
-				console.log(compyName + " offers " + quaOfEaMod + " different models for each product.");
-			} else {
-				console.log(ceo + " has to fire someone for false advertising");
-			};
+	//Used the threePro array individually so the sentence would sound grammatically correct by having "and" before tablet
+		console.log(ceo + " is the CEO of the company "+ compyName + ", which sells " + threePro[0] + "," + threePro[1] + ", and "+ threePro[2] + " devices.");
+			//if else of the number of models for each product	
+				if (numOfPro == true) {
+					console.log(compyName + " offers " + quaOfEaMod + " different models for each product.");
+				} else {
+					console.log(ceo + " has to fire someone for false advertising");
+				};
 //Reason for presentation
 console.log("The reason for " + ceo + " to be back in town was to present with the manager of operations " + manager + " the new " + quaOfEaMod+ " models for each of the products.");
-//First Model Displayed
-console.log("First presented was their " + threePro[0] + " models. "  + allMd[0] + " is called " + valLpMd1N + "that is priced at $" + valLpMd1P + ".");
-//Second Model Displayed
-console.log(allMd[1] + " was demonstrated by " + manager + " called " + valLpMd2N + " and priced at $" + valLpMd2P);
+console.log("Once the presentation started " +ceo + " discussed about the current devices and the new " + threePro + " models that were going to be presented.");
+//Products presented
+	//Laptop Model 1 & 2
+		console.log("He first displayed the " + threePro[0] + " " + allMd[0] + " called " + valLpMd1N + " that is priced at $" + valLpMd1P + ".");
+		console.log("Few minutes later " + allMd[1] + " " +threePro[0] + " called " + valLpMd2N + " was presented as having top quality features and priced at $" + valLpMd2P + ".");
+		//Compare & Nested Conditional
+			console.log("After presenting both models " + ceo + " compared both the " + valLpMd1N + " and " + valLpMd2N + " " + threePro[0] + "s by size and how durable the devices are.");
+				if (valLpMd2S > valLpMd1S ) {
+					if (!valLpMd2D == valLpMd1D) {
+						console.log("The " + valLpMd1N + " has a size of " + valLpMd1S + " making it not durable compared to the " + valLpMd2N + " that is " + valLpMd2S + ".");
+					}
+					else {
+						console.log("The " + valLpMd1N + " is not desized to be durable comapred to the " + valLpMd2N + ".");
+					}
+				}
+				else {
+					console.log("The " + valLpMd2N + " is the only durable device.");
+				};
+	//The Manager finishing the last two devices	
+		console.log("After " + ceo + " demonstrated the " + threePro[0] + " models, " + manager + " went to the stage to present the " + threePro[1] + " and " + threePro[2] + " models.");
+	//Desktop Model 1 & 2
+		console.log("")
+	//Tablet Model 1 & 2
+
 //Weekly Averages Laptop model 1 & 2 received, missing, returned(by customers)
 	var lapRecMisRet = {//(Laptop Received, Missing, & Returned)
 	    receLaMod: [//received shipment Laptop Models
