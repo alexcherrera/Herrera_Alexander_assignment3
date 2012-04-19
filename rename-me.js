@@ -24,25 +24,25 @@
 			var valLpMd2S = lapBoMd.model2.size;//(Value Laptop Model 2 size)
 			var valLpMd2D = lapBoMd.model2.durable;//(Value Laptop Model 2 durable)
 		//(JSON) Desktop Model 1 
-			var valDeMd1N = lapBoMd.model1.name;//(Value Desktop Model 1 name)
-			var valDeMd1P = lapBoMd.model1.price;//(Value Desktop Model 1 price)
-			var valDeMd1S = lapBoMd.model1.size;//(Value Desktop Model 1 size)
-			var valDeMd1Pr = lapBoMd.model1.printer;//(Vaue Desktop Model 1 printer)
+			var valDeMd1N = desBoMd.model1.name;//(Value Desktop Model 1 name)
+			var valDeMd1P = desBoMd.model1.price;//(Value Desktop Model 1 price)
+			var valDeMd1S = desBoMd.model1.size;//(Value Desktop Model 1 size)
+			var valDeMd1Pr = desBoMd.model1.printer;//(Vaue Desktop Model 1 printer)
 		//(JSON) Desktop Model 2
-			var valDeMd2N = lapBoMd.model2.name;//(Value Desktop Model 2 name)
-			var valDeMd2P = lapBoMd.model2.price;//(Value Desktop Model 2 price)
-			var valDeMd2S = lapBoMd.model2.size;//(Value Desktop Model 2 size)
-			var valDeMd2Pr = lapBoMd.model2.printer;//(Vaue Desktop Model 2 printer)
+			var valDeMd2N = desBoMd.model2.name;//(Value Desktop Model 2 name)
+			var valDeMd2P = desBoMd.model2.price;//(Value Desktop Model 2 price)
+			var valDeMd2S = desBoMd.model2.size;//(Value Desktop Model 2 size)
+			var valDeMd2Pr = desBoMd.model2.printer;//(Vaue Desktop Model 2 printer)
 		//(JSON) Tablet Model 1
-			var valTaMd1N = lapBoMd.model1.name;//(Value Tablet Model 1 name)
-			var valTaMd1P = lapBoMd.model1.name;//(Value Tablet Model 1 price)
-			var valTaMd1S = lapBoMd.model1.name;//(Value Tablet Model 1 size)
-			var valTaMd1Ca = lapBoMd.model1.name;//(Value Tablet Model 1 case)
+			var valTaMd1N = tabBoMd.model1.name;//(Value Tablet Model 1 name)
+			var valTaMd1P = tabBoMd.model1.price;//(Value Tablet Model 1 price)
+			var valTaMd1S = tabBoMd.model1.size;//(Value Tablet Model 1 size)
+			var valTaMd1Ca = tabBoMd.model1.printer;//(Value Tablet Model 1 case)
 		//(JSON) Tablet Model 2
-			var valTaMd2N = lapBoMd.model2.name;//(Value Tablet Model 2 name)
-			var valTaMd1P = lapBoMd.model2.name;//(Value Tablet Model 2 price)
-			var valTaMd1S = lapBoMd.model2.name;//(Value Tablet Model 2 size)
-			var valTaMd1Ca = lapBoMd.model2.name;//(Value Tablet Model 2 case)
+			var valTaMd2N = tabBoMd.model2.name;//(Value Tablet Model 2 name)
+			var valTaMd1P = tabBoMd.model2.price;//(Value Tablet Model 2 price)
+			var valTaMd1S = tabBoMd.model2.size;//(Value Tablet Model 2 size)
+			var valTaMd1Ca = tabBoMd.model2.printer;//(Value Tablet Model 2 case)
 //Number of employees working on each product & model	
 	//(JSON) All three products & Models
 		//Laptop Models
@@ -57,7 +57,7 @@
 
 //Starting Sentence	using an array	
 	//Used the threePro array individually so the sentence would sound grammatically correct by having "and" before tablet
-		console.log(ceo + " is the CEO of the company "+ compyName + ", which sells " + threePro[0] + "," + threePro[1] + ", and "+ threePro[2] + " devices.");
+		console.log(ceo + " is the CEO of the company "+ compyName + ", which sells " + threePro[0] + " and" + threePro[1] + " devices.");
 			//if else of the number of models for each product	
 				if (numOfPro == true) {
 					console.log(compyName + " offers " + quaOfEaMod + " different models for each product.");
@@ -87,8 +87,26 @@ console.log("Once the presentation started " +ceo + " discussed about the curren
 	//The Manager finishing the last two devices	
 		console.log("After " + ceo + " demonstrated the " + threePro[0] + " models, " + manager + " went to the stage to present the" + threePro[1] + " and" + threePro[2] + " models.");
 	//Desktop Model 1 & 2
-		//console.log("")
+		console.log("The new" + threePro[1] + ", " + allMd[0] + " is called the " + valDeMd1N + " priced at $" + valLpMd1P + " with the monitor having a size of " + valDeMd1S + ".");
+			if (valDeMd1Pr == true) {
+				console.log("Included with the " + valDeMd1N + " model is a printer at no extra cost.");
+			} else {
+				console.log("Their is no printer included with this purchase.");
+			};
+			console.log("The second" + threePro[1] + ", " + allMd[1] + " is called " + valDeMd2N + ",");
+				do {
+					if (valLpMd2P > valLpMd1P) {
+						console.log("which is at a higher price compared to the " + valLpMd1N + ". " + valDeMd2N + " is priced at $" + valLpMd2P + " and has a monitor size of " + valDeMd2S + ".");
+					} else {
+						console.log("is priced at $" + valLpMd2P + " with top quality features.");
+					}
+					console.log("An individual asked if the rumors were true if a printer was included with the " + valDeMd2N + " model and " + manager + " said that the rumors are " + valDeMd2Pr + ".");
+				} while (!valDeMd2Pr == false);
+		
 	//Tablet Model 1 & 2
+	console.log(manager + " stated \"we are proud to present a new product called the " + threePro[2] + "that also has " + quaOfEaMod + "models.");
+
+
 
 //Weekly Averages Laptop model 1 & 2 received, missing, returned(by customers)
 	var lapRecMisRet = {//(Laptop Received, Missing, & Returned)
@@ -121,25 +139,28 @@ console.log("Once the presentation started " +ceo + " discussed about the curren
 			calTotRecLaMd: function () {//Calculate Total Received Laptop Model
 				totBoMdReLa = stVReLaMd1 + stVReLaMd2;//Total Both Model Received Laptop
 				console.log(totBoMdReLa);
+				return totBoMdReLa;
 			},
 		},
 		totMisLaMd: {//Total Missing Laptop Model
 			calTotMisLaMd: function () {//Calculate Total Missing Laptop Model
 				totBoMdMisLa = stVMisLaMd1 + stVMisLaMd2;//Total Both Model Missing Laptop
 				console.log(totBoMdMisLa);
+				return totBoMdMisLa;
 			},
 		},
 		totRetLaMd: {//Total Returned Laptop Model
 			calTotRetLaMd: function ()  {//Calculate Total Returned Laptop Model
 				totBoMdRet = stVRtLaMd1 + stVRtLaMd2;//Total Both Model Returned 
 				console.log(totBoMdRetMd);
+				return totBoMdRet;
 			}
 		}
 	};
 //Values stored for calculate "total" of Laptop model 1 & 2 received, missing, returned
-	var calFuTReLaMd = totLaRecMisRet.totRecLaMd.calTotRecLaMd;//Call Function Total Received Laptop Model
-calFuTReLaMd();
-
+	var calFuTReLaMd = totLaRecMisRet.totRecLaMd.calTotRecLaMd();//Call Function Total Received Laptop Model
+	var calFuTMisLaMd = totLaRecMisRet.totMisLaMd.calTotMisLaMd();//Call Function Total Missing Laptop Model
+	var calFuTMisLaMd = totLaRecMisRet.totMisLaMd.calTotMisLaMd();//Call Function Total Returned Laptop Model
 //Weekly Averages Desktop model 1 & 2 received, missing, returned(by customers)
 	var desRecMisRet = {//Array's for Weekly Averages Desktops model 1 & 2 received & missing, returned(by customers)
 		receDeMod: [//received Desktop Models
@@ -187,8 +208,8 @@ calFuTReLaMd();
 			}
 		}
 	};
-	var calFuTReDesMd = totDesRecMisRet.totRecDesMd.calTotRecDesMd;//Call Function Total Received Desktop Model
-calFuTReDesMd();
+	//var calFuTReDesMd = totDesRecMisRet.totRecDesMd.calTotRecDesMd;//Call Function Total Received Desktop Model
+//calFuTReDesMd();
 
 //Weekly Averages Tablet model 1 & 2 received, missing, returned(by customers)
 	var tabRecMisRet = {//Array's for Weekly Averages Tablets model 1 & 2 received & missing, returned(by customers)
@@ -279,46 +300,71 @@ calFuTReTabMd();
 
 //Calculate "total" sold of Laptop, Desktop, and Tablet model 1 & 2
 	var totSolAllPrMd = {//Total Sold All Product Models
-		calTotSolLaMd: {//Calculate Total Sold Laptop Model
-			calSolLaMd: function () {//Calculate Sold Laptop Model
-				totSolLaMd = stSolLaMd1 + stSolLaMd2;//Total Sold Laptop Model
-				console.log(totSolLaMd);
+		calTotSolAllMd: [//Calculate Total Sold All Models
+			{
+				calSolLaMd: function (one) {//Calculate Sold Laptop Model
+					var totSolLaMd;
+					var extrLaMd;
+					totSolLaMd = one + stSolLaMd2;//Total Sold Laptop Models
+					extrLaMd = calFuTReLaMd - totSolLaMd;
+					console.log(totSolLaMd);
+					console.log(extrLaMd);
+						if(extrLaMd < totSolLaMd) {
+							console.log(totSolLaMd + "rhis " + extrLaMd);
+				
+					}
+					return totSolLaMd;			
+				}
 			},
-		},
-		calTotSolDesMd: {//Calculate Total Sold Desktop Model
-			calSolDesMd: function () {//Calculate Sold Desktop Model
-				totSolDesMd = stSolDeMd1 + stSolDeMd2;//Total Sold Dektop Model
-				console.log(totSolDesMd);
-			},
-		},
-		calTotSolTabMd: {//Calculate Total Sold Tablet Model
-			calSolTabMd: function () {//Calculate Sold Tablet Model
-				totSolTabMd = stSolTaMd1 + stSolTaMd2;//Total Sold Tablet Model
-				console.log(totSolTabMd);
-			},
-		},
-
+			{
+		//calTotSolDesMd: //Calculate Total Sold Desktop Model
+				calSolDesMd: function () {//Calculate Sold Desktop Models
+					totSolDesMd = stSolDeMd1 + stSolDeMd2;//Total Sold Dektop Model
+				//console.log(totSolDesMd);
+				},
+			},	
+			{
+		//calTotSolTabMd: {//Calculate Total Sold Tablet Model
+			calSolTabMd: function () {//Calculate Sold Tablet Models
+				totSolTabMd = stSolTaMd1 + stSolTaMd2;//Total Sold Tablet Models
+				//console.log(totSolTabMd);
+				}
+			}
+		]
 	};
+	
+//console.log(calValStSolLaMd);
+
 //Call "Values stored" of "Calculated Sold Products" based on Weekly Averages
-	var calValStSolLaMd = totSolAllPrMd.calTotSolLaMd.calSolLaMd();
-	calValStSolLaMd;
-	var calValStSoDesMd = totSolAllPrMd.calTotSolDesMd.calSolDesMd();
-	var calValStSoTabMd = totSolAllPrMd.calTotSolTabMd.calSolTabMd();
-//Calculate and Call "total" of devices
-	var totThrePro = function () {
+
+	var calValStSolLaMd = totSolAllPrMd.calTotSolAllMd[0].calSolLaMd(stSolLaMd1);
+	var calValStSoDesMd = totSolAllPrMd.calTotSolAllMd[1].calSolDesMd();
+	var calValStSoTabMd = totSolAllPrMd.calTotSolAllMd[2].calSolTabMd();
+	
+
+	//var aryStSoVal = [calValStSolLaMd, calValStSoDesMd, calValStSoTabMd];		
 		
-	}
+			//console.log(aryStSoVal);
+
+	//calValStSolLaMd;
+//Calculate and Call "total" of devices sold
+	//var totThrePro = function () {
+	//	totSolAll = calValStSolLaMd + calValStSoDesMd + calValStSoTabMd;
+	//	console.log(totSolAll);
+	
+//totThrePro();
+//console.log(totSolAll);
 //Calculate remaining products
 var calRemaAllMd= {
 	calRemaBoLaMd: {
 		remaLaMd1: function (amount1) {//Calculate Remaining laptop Model 1
 			var remaLaMd1 = amount1 - stSolLaMd1;//Remaining Laptop Model 1
-			console.log("Result is " + remaLaMd1 + " from " + stSolLaMd1);
+			//console.log("Result is " + remaLaMd1 + " from " + stSolLaMd1);
 			return remaLaMd1;
 		},
 		remaLaMd2: function (amount2) {//Calculate Remaining laptop Model 2
 			var remaLaMd2 = amount2 - stSolLaMd2;//Remaining Laptop Model 2
-			console.log("Result is " + remaLaMd2 + " from " + stSolLaMd2);
+			//console.log("Result is " + remaLaMd2 + " from " + stSolLaMd2);
 			return remaLaMd2;
 		},
 		}
@@ -332,11 +378,11 @@ var calRemaAllMd= {
 	},
 
 };*/
-var callFuRemaLaMd1 = calRemaAllMd.calRemaBoLaMd.remaLaMd1(stVReLaMd1);
-console.log(callFuRemaLaMd1);
+//var callFuRemaLaMd1 = calRemaAllMd.calRemaBoLaMd.remaLaMd1(stVReLaMd1);
+//console.log(callFuRemaLaMd1);
 
-var callFuRemaLaMd2 = calRemaAllMd.calRemaBoLaMd.remaLaMd2(stVReLaMd2);
-console.log(callFuRemaLaMd2);
+//var callFuRemaLaMd2 = calRemaAllMd.calRemaBoLaMd.remaLaMd2(stVReLaMd2);
+//console.log(callFuRemaLaMd2);
 
 
 

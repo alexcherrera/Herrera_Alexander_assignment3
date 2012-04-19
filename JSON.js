@@ -21,7 +21,7 @@
 				"size": "17 inches",
 				"printer": true//If it comes with a printer
 			},
-			"mode2": {
+			"model2": {
 				"name": "DLD-Quad",
 				"price": 1300,
 				"size": "21 inches",
