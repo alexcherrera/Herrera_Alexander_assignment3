@@ -104,13 +104,14 @@ console.log("Once the presentation started" + ceo + " discussed about the curren
 				} while (!valDeMd2Pr == false);
 		
 	//Tablet Model 1 & 2
-	console.log(manager + " stated \"we are proud to present a new product line called the" + threePro[2] + " that also has " + quaOfEaMod + " models.\"");
-	console.log("First she compares the thickness of the" + threePro[2] + " with the " + threePro[0] + " using the first model, called the " + valTaMd1N + ".");
-	console.log("The " + valTaMd1N + " is the cheapest device that " + compyName + " offers at a price of $" + valTaMd1P + " and it's " + valTaMd1S + " inches.");
+		//Tablet Model 1
+			console.log(manager + " stated \"we are proud to present a new product line called the" + threePro[2] + " that also has " + quaOfEaMod + " models.\"");
+			console.log("First she compares the thickness of the" + threePro[2] + " with the " + threePro[0] + " using the first model, called the " + valTaMd1N + ".");
+			console.log("The " + valTaMd1N + " is the cheapest device that " + compyName + " offers at a price of $" + valTaMd1P + " and it's " + valTaMd1S + " inches.");
 	
 
 
-	var boolTabCaMd1 = function (MustValue) {
+	var funTabCaMd1 = function (MustValue) {
 		var reqSizeTabMd = 9.5;
 		if (MustValue < reqSizeTabMd){
 			console.log(compyName + " has a policy that in order to receive a case at no extra cost, the size of the " + threePro[2] + " must be " + reqSizeTabMd + "\nand the " + valTaMd1N + " is " + MustValue + " inches.");
@@ -119,9 +120,26 @@ console.log("Once the presentation started" + ceo + " discussed about the curren
 		}
 		return reqSizeTabMd;
 	};
-	var callFunBool = boolTabCaMd1(valTaMd1S);
-	
-//console.log(callFunBool);
+	var callFunTabCaMdReq = funTabCaMd1(valTaMd1S);
+		//Tablet Model 2
+			console.log("The Second model" + threePro[2] + " " + valTaMd2N + "that is the same price as the " + valDeMd2N + " and has a size of " + valTaMd2S + " inches.");
+				var boolTabCaMd2 = function (check) {
+				var checkAnswer;
+				
+					if (check > callFunTabCaMdReq){
+						checkAnswer = true;
+					} else {
+						checkAnswer = false;
+					}
+					return checkAnswer;
+	};
+	var callFunBool = boolTabCaMd2(valTaMd2S);
+			if(valTaMd2Ca == callFunBool){
+				console.log("The " + valTaMd2N + " falls under the case policy because the size is " + valTaMd2S + " inches, meaning that it's " + callFunBool + ", \ntheir is no extra cost because it passes the requirement of " + callFunTabCaMdReq + " inches.");
+			} else {
+				console.log("This model will not be receiving a case with their purchase.");
+			}
+					
 //Weekly Averages Laptop model 1 & 2 received, missing, returned(by customers)
 	var lapRecMisRet = {//(Laptop Received, Missing, & Returned)
 	    receLaMod: [//received shipment Laptop Models
