@@ -4,13 +4,13 @@
 			"model1": {
 				"name": "MN1-Light",
 				"price": 900,
-				"size": "13 inches",
+				"size": 13,
 				"durable": false
 			},
 			"model2": {
 				"name": "MN2-Extreme",
 				"price": 1500,
-				"size": "15 inches",
+				"size": 15 ,
 				"durable": true
 			}
 		};
@@ -18,13 +18,13 @@
 			"model1": {
 				"name": "LD-Sheet",
 				"price": 650,
-				"size": "17 inches",
+				"size": 17,
 				"printer": true//If it comes with a printer
 			},
 			"model2": {
 				"name": "DLD-Quad",
 				"price": 1300,
-				"size": "21 inches",
+				"size": 21 ,
 				"printer": false//If it comes with a printer
 			}
 		};
@@ -32,13 +32,13 @@
 			"model1": {
 				"name": "D-Screen",
 				"price" : 350,
-				"size": "8 inches",
+				"size": 8,
 				"case": false//If a case is included
 			},	
 		 	"model2": {
 		 		"name": "DX-Quad-Screen",
 				"price": 650,
-				"size": "11 inches",
+				"size": 10.5,
 		    	"case": true//If a case is included
 		    }
 		};

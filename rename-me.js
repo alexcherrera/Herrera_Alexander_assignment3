@@ -37,12 +37,12 @@
 			var valTaMd1N = tabBoMd.model1.name;//(Value Tablet Model 1 name)
 			var valTaMd1P = tabBoMd.model1.price;//(Value Tablet Model 1 price)
 			var valTaMd1S = tabBoMd.model1.size;//(Value Tablet Model 1 size)
-			var valTaMd1Ca = tabBoMd.model1.printer;//(Value Tablet Model 1 case)
+			var valTaMd1Ca = tabBoMd.model1.case;//(Value Tablet Model 1 case)
 		//(JSON) Tablet Model 2
 			var valTaMd2N = tabBoMd.model2.name;//(Value Tablet Model 2 name)
-			var valTaMd1P = tabBoMd.model2.price;//(Value Tablet Model 2 price)
-			var valTaMd1S = tabBoMd.model2.size;//(Value Tablet Model 2 size)
-			var valTaMd1Ca = tabBoMd.model2.printer;//(Value Tablet Model 2 case)
+			var valTaMd2P = tabBoMd.model2.price;//(Value Tablet Model 2 price)
+			var valTaMd2S = tabBoMd.model2.size;//(Value Tablet Model 2 size)
+			var valTaMd2Ca = tabBoMd.model2.case;//(Value Tablet Model 2 case)
 //Number of employees working on each product & model	
 	//(JSON) All three products & Models
 		//Laptop Models
@@ -66,7 +66,7 @@
 				};
 //Reason for presentation
 console.log("The reason for " + ceo + " to be back in town was to present with the manager of operations " + manager + " the new " + quaOfEaMod+ " models for each of the products.");
-console.log("Once the presentation started " +ceo + " discussed about the current devices and the new " + threePro + " models that were going to be presented.");
+console.log("Once the presentation started" + ceo + " discussed about the current devices and the new " + threePro[0] + " and" + threePro[1] + " models that were going to be presented.");
 //Products presented
 	//Laptop Model 1 & 2
 		console.log("He first displayed the " + threePro[0] + " " + allMd[0] + " called " + valLpMd1N + " that is priced at $" + valLpMd1P + ".");
@@ -75,7 +75,7 @@ console.log("Once the presentation started " +ceo + " discussed about the curren
 			console.log("After presenting both models " + ceo + " compared both the " + valLpMd1N + " and " + valLpMd2N + " " + threePro[0] + "s by size and how durable the devices are.");
 				if (valLpMd2S > valLpMd1S ) {
 					if (!valLpMd2D == valLpMd1D) {
-						console.log("The " + valLpMd1N + " has a size of " + valLpMd1S + " making it not durable compared to the " + valLpMd2N + " that is " + valLpMd2S + ".");
+						console.log("The " + valLpMd1N + " has a size of " + valLpMd1S + " making it not durable compared to the " + valLpMd2N + " that is " + valLpMd2S + " inches.");
 					}
 					else {
 						console.log("The " + valLpMd1N + " is not desized to be durable comapred to the " + valLpMd2N + ".");
@@ -87,16 +87,16 @@ console.log("Once the presentation started " +ceo + " discussed about the curren
 	//The Manager finishing the last two devices	
 		console.log("After " + ceo + " demonstrated the " + threePro[0] + " models, " + manager + " went to the stage to present the" + threePro[1] + " and" + threePro[2] + " models.");
 	//Desktop Model 1 & 2
-		console.log("The new" + threePro[1] + ", " + allMd[0] + " is called the " + valDeMd1N + " priced at $" + valLpMd1P + " with the monitor having a size of " + valDeMd1S + ".");
+		console.log("The new" + threePro[1] + ", " + allMd[0] + " is called the " + valDeMd1N + " priced at $" + valLpMd1P + " with the monitor having a size of " + valDeMd1S + " inches.");
 			if (valDeMd1Pr == true) {
-				console.log("Included with the " + valDeMd1N + " model is a printer at no extra cost.");
+				console.log("Included with the purchase of the " + valDeMd1N + " model is a printer at no extra cost.");
 			} else {
 				console.log("Their is no printer included with this purchase.");
 			};
 			console.log("The second" + threePro[1] + ", " + allMd[1] + " is called " + valDeMd2N + ",");
 				do {
 					if (valLpMd2P > valLpMd1P) {
-						console.log("which is at a higher price compared to the " + valLpMd1N + ". " + valDeMd2N + " is priced at $" + valLpMd2P + " and has a monitor size of " + valDeMd2S + ".");
+						console.log("which is at a higher price compared to the " + valLpMd1N + ". " + valDeMd2N + " is priced at $" + valLpMd2P + " and has a monitor size of " + valDeMd2S + " inches.");
 					} else {
 						console.log("is priced at $" + valLpMd2P + " with top quality features.");
 					}
@@ -104,10 +104,24 @@ console.log("Once the presentation started " +ceo + " discussed about the curren
 				} while (!valDeMd2Pr == false);
 		
 	//Tablet Model 1 & 2
-	console.log(manager + " stated \"we are proud to present a new product called the " + threePro[2] + "that also has " + quaOfEaMod + "models.");
+	console.log(manager + " stated \"we are proud to present a new product line called the" + threePro[2] + " that also has " + quaOfEaMod + " models.\"");
+	console.log("First she compares the thickness of the" + threePro[2] + " with the " + threePro[0] + " using the first model, called the " + valTaMd1N + ".");
+	console.log("The " + valTaMd1N + " is the cheapest device that " + compyName + " offers at a price of $" + valTaMd1P + " and it's " + valTaMd1S + " inches.");
+	
 
 
-
+	var boolTabCaMd1 = function (MustValue) {
+		var reqSizeTabMd = 9.5;
+		if (MustValue < reqSizeTabMd){
+			console.log(compyName + " has a policy that in order to receive a case at no extra cost, the size of the " + threePro[2] + " must be " + reqSizeTabMd + "\nand the " + valTaMd1N + " is " + MustValue + " inches.");
+		} else {
+			console.log("This model will be receiving a case with their purchase.");
+		}
+		return reqSizeTabMd;
+	};
+	var callFunBool = boolTabCaMd1(valTaMd1S);
+	
+//console.log(callFunBool);
 //Weekly Averages Laptop model 1 & 2 received, missing, returned(by customers)
 	var lapRecMisRet = {//(Laptop Received, Missing, & Returned)
 	    receLaMod: [//received shipment Laptop Models
@@ -313,7 +327,7 @@ calFuTReTabMd();
 							console.log(totSolLaMd + "rhis " + extrLaMd);
 				
 					}
-					return totSolLaMd;			
+					return extrLaMd;			
 				}
 			},
 			{
