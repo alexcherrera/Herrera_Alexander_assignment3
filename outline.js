@@ -29,6 +29,7 @@ console.log("Their should always be an extra amount of " + exMod1 + " " + naLapM
 	};
 	var mod1Mis = lapMisMod1.mn1LtMis;
 //Calculate Required Amount of weekly Laptops for Model 1
+	/*
 	var calReqLap = function ([amount1, amount2]) {
 	
 		var totBoLaRe = reqMod1 + reqMod2;//Total Both Laptop Models Required 
@@ -46,3 +47,41 @@ console.log("Their should always be an extra amount of " + exMod1 + " " + naLapM
 		return [exMod1,exMod2];
 	};
 	var retCalReqLap = calReqLap([mod1So,mod2So]);
+
+
+
+	//Number of employees working on each product & model	
+	//(JSON) All three products & Models
+		//Laptop Models
+			var valMN1Em = allthrPro.lapMdsBo[0].lapMN1Em;//(Value of Laptop MN1-Light Employees)
+			var valMN2Em = allthrPro.lapMdsBo[1].lapMN2Em;//(Value of Laptop MN2- Employees)
+		//Desktop Models
+			var valLDSEm = allthrPro.desMdsBo[0].deLDShEm;//(Value of Desktop LD-Sheet Employees)
+			var valDLDEm = allthrPro.desMdsBo[1].deDLDShEm;//(Value of Desktop DLD-Quad Employees)
+		//Tablet Models
+			var valDScEm = allthrPro.tabMdsBo[0].taDScrEm;//(Value of Tablet D-Screen Employees) 
+			var valDXQScEm = allthrPro.tabMdsBo[1].taDXQScEm;//(Value of Tablet D-Screen Employees)
+
+//var empLapBoMd = function (employee) {
+			var lapMdName = ["MN1-Light", "MN2-Extreme"];
+			for (var i = 0; i < employee.lapMdsBo.length; i++){
+				for (i1 = 0; i1 < lapMdName.length; i1++) {
+				var storEmpLapBoMd = employee.lapMdsBo[i];
+				var storeLapMdName = lapMdName[i1];
+					console.log("For the " + storeLapMdName + " model " + lapMdName + " there will be " + storEmpLapBoMd.lapMdEm);
+				}
+			};
+
+		};
+		var callEmpLapBoMd = empLapBoMd(allthrPro);
+
+
+*/
+
+
+
+
+
+
+
+

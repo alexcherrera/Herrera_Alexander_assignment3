@@ -46,26 +46,41 @@
 	var allthrPro = {//All three products & Models
 		"lapMdsBo":[//Laptop Models Both
 			{
-				"lapMN1Em" : 60,//(Laptop MN1-Light Employees)
+				"product": "Laptop",
+				"model": "MN1-Light",
+				"laMdEm": 60,//(Laptop MN1-Light Employees)
 			},
 			{
-				"lapMN2Em" : 25//(Laptop MN2-Extreme Employees)
+				"product": "Laptop",
+				"model": "MN2-Extreme",
+				"laMdEm": 25//(Laptop MN2-Extreme Employees)
 			}
 		],
 		"desMdsBo": [//Desktop Models Both
 			{
-				"deLDShEm" : 30,//(Desktop LD-Sheet Employees)
+				"product": "Desktop",
+				"model": "LD-Sheet",
+				"deMdEm": 30 //(Desktop LD-Sheet Employees)
 			},
 			{
-				"deDLDShEm" : 20//(Desktop DLD-Quad Employees)
+				"product": "Desktop",
+				"model": "DLD-Quad",
+				"deMdEm": 20//(Desktop DLD-Quad Employees)
 			}
 		],
 		"tabMdsBo": [//Tablet Models Both 
 			{
-				"taDScreEm" : 90,//(Tablet D-Screen Employees)
+				"product": "Tablet",
+				"model": "D-Screen",
+				"taMdEm": 90,//(Tablet D-Screen Employees)
 			},
 			{
-				"taDXQScEm" : 60//(Tablet DX-Quad-Screen Employees)
+				"product": "Tablet",
+				"model": "DX-Quad-Screen",
+				"taMdEm": 60//(Tablet DX-Quad-Screen Employees)
 			}
 		]
 	};	
+
+
+
