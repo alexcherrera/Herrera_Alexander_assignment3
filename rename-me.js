@@ -27,7 +27,6 @@
 			var valDeMd1N = desBoMd.model1.name;//(Value Desktop Model 1 name)
 			var valDeMd1P = desBoMd.model1.price;//(Value Desktop Model 1 price)
 			var valDeMd1S = desBoMd.model1.size;//(Value Desktop Model 1 size)
-			//var mutValDeMd1S = desBoMd.model1.size(19);("Mutator Value Desktop Model 1 size");
 			var valDeMd1Pr = desBoMd.model1.printer;//(Vaue Desktop Model 1 printer)
 		//(JSON) Desktop Model 2
 			var valDeMd2N = desBoMd.model2.name;//(Value Desktop Model 2 name)
@@ -104,8 +103,8 @@ console.log("Once the presentation started" + ceo + " discussed about the curren
 			console.log("First she compares the thickness of the" + threePro[2] + " with the " + threePro[0] + " using the first model, called the " + valTaMd1N + ".");
 			console.log("The " + valTaMd1N + " is the cheapest device that " + compyName + " offers at a price of $" + valTaMd1P + " and it's " + valTaMd1S + " inches.");
 
-			var funTabCaMd1 = function (MustValue) {//Function Tablet Case Model1
-				var reqSizeTabMd = 9.5;
+			var funTabCaMd1 = function (MustValue) {//Function Tablet Case Model 1
+				var reqSizeTabMd = 9.5;//reqSizeTabMd
 		if (MustValue < reqSizeTabMd){
 			console.log(compyName + " has a policy that in order to receive a case at no extra cost, the size of the " + threePro[2] + " must be " + reqSizeTabMd + "\nand the " + valTaMd1N + " is " + MustValue + " inches.");
 		} else {
@@ -113,10 +112,10 @@ console.log("Once the presentation started" + ceo + " discussed about the curren
 		}
 		return reqSizeTabMd;
 	};
-	var callFunTabCaMdReq = funTabCaMd1(valTaMd1S);
+	var callFunTabCaMdReq = funTabCaMd1(valTaMd1S);//Call Function Tablet Case Model
 		//Tablet Model 2
 			console.log("The Second model" + threePro[2] + " " + valTaMd2N + "that is the same price as the " + valDeMd2N + " and has a size of " + valTaMd2S + " inches.");
-				var boolTabCaMd2 = function (check) {
+				var boolTabCaMd2 = function (check) {//Boolean Tablet Case Model 2
 				var checkAnswer;
 				
 					if (check > callFunTabCaMdReq){
@@ -126,7 +125,7 @@ console.log("Once the presentation started" + ceo + " discussed about the curren
 					}
 					return checkAnswer;
 	};
-	var callFunBool = boolTabCaMd2(valTaMd2S);
+	var callFunBool = boolTabCaMd2(valTaMd2S);//Call Function Boolean
 			if(valTaMd2Ca == callFunBool){
 				console.log("The " + valTaMd2N + " falls under the case policy because the size is " + valTaMd2S + " inches, meaning that it's " + callFunBool + ", \ntheir is no extra cost because it passes the requirement of " + callFunTabCaMdReq + " inches.");
 			} else {
@@ -134,45 +133,43 @@ console.log("Once the presentation started" + ceo + " discussed about the curren
 			}
 
 //After presentation
-
-
 	console.log("After the presentation " + ceo + " and " + manager + " had a meeting with all the employees of each product department (" + threePro[0] + threePro[1] + ", and" + threePro[2] + ")."); 
 	console.log(ceo + " started by saying their will be a a group of people assigned to a specific product model to work on. ");	
 	console.log("The list displayed: ");
 	
-		var empLapBoMd = function (employeeLap) {
+		var empLapBoMd = function (employeeLap) {//Employee Laptop Both Model
 			
 			for (var l = 0; l < employeeLap.lapMdsBo.length; l++){
 				
-				var storEmpLapBoMd = employeeLap.lapMdsBo[l]; 
+				var storEmpLapBoMd = employeeLap.lapMdsBo[l];//Store Employee Laptop Both Model
 					console.log("Product type: " + storEmpLapBoMd.product + ", Model " + storEmpLapBoMd.model + ", Number of employee's: " + storEmpLapBoMd.laMdEm + ".");
 				};
 			
 			};
 		empLapBoMd = empLapBoMd(allthrPro);
 		
-		var empDesBoMd = function (employeeDes) {
+		var empDesBoMd = function (employeeDes) {//Employee Desktop Both Model
 			
 			for (var d = 0; d < employeeDes.desMdsBo.length; d++){
 				
-				var storEmpDesBoMd = employeeDes.desMdsBo[d]; 
+				var storEmpDesBoMd = employeeDes.desMdsBo[d]; //Store Employee Desktop Both Model
 					console.log("Product type: " + storEmpDesBoMd.product + ", Model " + storEmpDesBoMd.model + ", Number of employee's: " + storEmpDesBoMd.deMdEm + ".");
 				};
 			
 			};
 		empDesBoMd = empDesBoMd(allthrPro);
 
-		var empTabBoMd = function (employeeTab) {
+		var empTabBoMd = function (employeeTab) {//Employee Tablet Both Model
 			
 			for (var t = 0; t < employeeTab.tabMdsBo.length; t++){
 				
-				var storEmpTabBoMd = employeeTab.tabMdsBo[t]; 
+				var storEmpTabBoMd = employeeTab.tabMdsBo[t]; //Store Employee Tablet Both Model
 					console.log("Product type: " + storEmpTabBoMd.product + ", Model " + storEmpTabBoMd.model + ", Number of employee's: " + storEmpTabBoMd.taMdEm + ".");
 				};
 			
 			};
 		empTabBoMd = empTabBoMd(allthrPro);
-
+//Closing Sentence
 		console.log("After the meeting " + ceo + " announced that he was going to be involded with the company.");
 
 
